@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>😆 Desi Joke Teller - By Dipak</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    #joke {
+      font-size: 1.4em;
+      background: #fff7e6;
+      padding: 20px;
+      border-radius: 20px;
+      min-height: 80px;
+      max-width: 600px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      background: #ff914d;
+      color: white;
+      border: 3px solid #ff6300;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: glow 1.2s infinite alternate;
+    }
+
+    button:hover {
+      background: #ff6300;
+      transform: scale(1.05);
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #ff914d; }
+      to { box-shadow: 0 0 20px #ff914d; }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5em; }
+      #joke { font-size: 1.1em; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🇮🇳 Desi Joke Teller - By Dipak</h1>
+  <div id="joke">Click below for a Hindi/Hinglish joke! 😂</div>
+  <button onclick="tellDesiJoke()">😆 Show Desi Joke</button>
+  <footer>Hassi chhupayi toh fine lagega! 😂 | Subscribe DReducation25</footer>
+
+  <script>
+    const jokes = [
+      "Pappu: Sir, aapka naam kya hai?\nTeacher: Mr. Singh\nPappu: Sir naam to batao, Singh to sabka hota hai! 😂",
+      "Life ka asli maza toh tab hai jab teacher khud keh de – ‘Beta bas kar, tu sab jaanta hai!’ 🤣",
+      "Kya aapko bhi Monday se allergy hai? Mujhe toh pura hafte se hai bhai! 😜",
+      "Exam mein likha: 'Define Tension'\nStudent ne likha: ‘Jab pen gayab ho aur teacher bol de time over!’ 😆",
+      "Log bolte hain ‘Jio zyada mat’, par hum toh kehte hain ‘Hassi zyada kar yaar!’ 😄",
+      "Tujhme oxygen jaisa kuch baat hai,\nTu door ho toh saans ruk jaati hai... 😜",
+      "Dost: Tera result kaisa aaya?\nMain: Screenshot bhej dun ya mummy ko call karaun? 😂",
+      "Teacher: Homework kahan hai?\nStudent: Ma’am voh toh dreams mein aaya tha, reality mein nahi! 🤣",
+      "Girlfriend: Mujhe joke sunao\nBoyfriend: Tumhare bina zindagi... 😆\nGF: Shut up! 😤"
+    ];
+
+    function tellDesiJoke() {
+      const jokeBox = document.getElementById("joke");
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+      jokeBox.innerText = randomJoke;
+      jokeBox.style.transform = 'scale(1.05)';
+      setTimeout(() => {
+        jokeBox.style.transform = 'scale(1)';
+      }, 200);
+    }
+  </script>
+</body>
+</html>
